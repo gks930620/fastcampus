@@ -1,0 +1,6 @@
+어디수부터 해야되냐면
+
+board  : 배포하기전 카카오 oauth까지 완성한 상태의 uno거 그대로.. 그래서 db주소 id password 에러난 상태
+
+boardadmin : 지금 board 그냥 복사한 상태
+
