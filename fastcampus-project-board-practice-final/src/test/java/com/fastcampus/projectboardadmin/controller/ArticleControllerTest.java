@@ -1,16 +1,17 @@
 package com.fastcampus.projectboardadmin.controller;
 
+import com.fastcampus.projectboard.controller.ArticleController;
 import com.fastcampus.projectboardadmin.config.TestSecurityConfig;
-import com.fastcampus.projectboardadmin.domain.constant.FormStatus;
-import com.fastcampus.projectboardadmin.domain.constant.SearchType;
-import com.fastcampus.projectboardadmin.dto.ArticleDto;
-import com.fastcampus.projectboardadmin.dto.ArticleWithCommentsDto;
-import com.fastcampus.projectboardadmin.dto.HashtagDto;
-import com.fastcampus.projectboardadmin.dto.UserAccountDto;
-import com.fastcampus.projectboardadmin.dto.request.ArticleRequest;
-import com.fastcampus.projectboardadmin.dto.response.ArticleResponse;
-import com.fastcampus.projectboardadmin.service.ArticleService;
-import com.fastcampus.projectboardadmin.service.PaginationService;
+import com.fastcampus.projectboard.domain.constant.FormStatus;
+import com.fastcampus.projectboard.domain.constant.SearchType;
+import com.fastcampus.projectboard.dto.ArticleDto;
+import com.fastcampus.projectboard.dto.ArticleWithCommentsDto;
+import com.fastcampus.projectboard.dto.HashtagDto;
+import com.fastcampus.projectboard.dto.UserAccountDto;
+import com.fastcampus.projectboard.dto.request.ArticleRequest;
+import com.fastcampus.projectboard.dto.response.ArticleResponse;
+import com.fastcampus.projectboard.service.ArticleService;
+import com.fastcampus.projectboard.service.PaginationService;
 import com.fastcampus.projectboardadmin.util.FormDataEncoder;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;

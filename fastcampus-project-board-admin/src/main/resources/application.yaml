@@ -1,6 +1,5 @@
 debug: false
 management.endpoints.web.exposure.include: "*"
-server.port: 8081
 
 logging:
   level:
@@ -8,10 +7,13 @@ logging:
     org.springframework.web.servlet: debug
     org.hibernate.type.descriptor.sql.BasicBinder: trace
 
+server.port: 8081
+
 spring:
+  devtools.livereload.port: 35730
   datasource:
-    url: jdbc:postgresql://localhost:5432/board
-    username: postgres
+    url: jdbc:mysql://localhost:3306/admin
+    username: changhee
     password: ckdlsk13!A
   jpa:
     open-in-view: false
@@ -22,9 +24,6 @@ spring:
       hibernate.format_sql: true
       hibernate.default_batch_fetch_size: 100
   sql.init.mode: always
-  data.rest:
-    base-path: /api
-    detection-strategy: annotated
   thymeleaf3.decoupled-logic: true
   security:
     oauth2:
@@ -46,9 +45,5 @@ spring:
 ---
 
 spring:
-  config.activate.on-profile: heroku
-  datasource:
-    url: ${JAWSDB_URL}
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa.hibernate.ddl-auto: create
-  sql.init.mode: always
+  config.activate.on-profile: test
+  datasource.url: jdbc:h2:mem:testdb

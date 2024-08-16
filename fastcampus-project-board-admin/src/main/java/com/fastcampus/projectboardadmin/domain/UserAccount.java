@@ -27,11 +27,9 @@ public class UserAccount extends AuditingFields {
 
     @Setter @Column(nullable = false) private String userPassword;
 
-
     @Convert(converter = RoleTypesConverter.class)
     @Column(nullable = false)
-    private Set<RoleType> roleTypes=new LinkedHashSet<>();  //다대일, 다대다 관계하는게 정석이지만, 간단히 하나의 컬럼에 문자열로 한번에 다 때려넣는 방식.
-    //가져올때는 알아서 문자열을 colelction으로 만들어줌
+    private Set<RoleType> roleTypes = new LinkedHashSet<>();
 
 
     @Setter @Column(length = 100) private String email;
@@ -41,10 +39,10 @@ public class UserAccount extends AuditingFields {
 
     protected UserAccount() {}
 
-    private UserAccount(String userId, String userPassword,Set<RoleType> roleTypes, String email, String nickname, String memo, String createdBy) {
+    private UserAccount(String userId, String userPassword, Set<RoleType> roleTypes, String email, String nickname, String memo, String createdBy) {
         this.userId = userId;
         this.userPassword = userPassword;
-        this.roleTypes=roleTypes;
+        this.roleTypes = roleTypes;
         this.email = email;
         this.nickname = nickname;
         this.memo = memo;
@@ -52,28 +50,25 @@ public class UserAccount extends AuditingFields {
         this.modifiedBy = createdBy;
     }
 
-
-    public static UserAccount of(String userId, String userPassword,Set<RoleType> roleTypes, String email, String nickname, String memo) {
-        return of(userId, userPassword,roleTypes, email, nickname, memo, null);
+    public static UserAccount of(String userId, String userPassword, Set<RoleType> roleTypes, String email, String nickname, String memo) {
+        return UserAccount.of(userId, userPassword, roleTypes, email, nickname, memo, null);
     }
 
-
-    public static UserAccount of(String userId, String userPassword, Set<RoleType> roleTypes,String email, String nickname, String memo, String createdBy) {
-        return new UserAccount(userId, userPassword,roleTypes, email, nickname, memo, createdBy);
+    public static UserAccount of(String userId, String userPassword, Set<RoleType> roleTypes, String email, String nickname, String memo, String createdBy) {
+        return new UserAccount(userId, userPassword, roleTypes, email, nickname, memo, createdBy);
     }
 
-    public void addRoleType(RoleType roleType){
+    public void addRoleType(RoleType roleType) {
         this.getRoleTypes().add(roleType);
     }
 
-    public void addRoleTypes(Collection<RoleType> roleTypes){
+    public void addRoleTypes(Collection<RoleType> roleTypes) {
         this.getRoleTypes().addAll(roleTypes);
     }
 
-    public void removeRoleType(RoleType roleType){
+    public void removeRoleType(RoleType roleType) {
         this.getRoleTypes().remove(roleType);
     }
-
 
     @Override
     public boolean equals(Object o) {
@@ -82,11 +77,9 @@ public class UserAccount extends AuditingFields {
         return this.getUserId() != null && this.getUserId().equals(that.getUserId());
     }
 
-
     @Override
     public int hashCode() {
         return Objects.hash(this.getUserId());
     }
-
 
 }

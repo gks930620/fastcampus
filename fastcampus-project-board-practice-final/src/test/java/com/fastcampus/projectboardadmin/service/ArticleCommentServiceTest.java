@@ -1,14 +1,15 @@
 package com.fastcampus.projectboardadmin.service;
 
-import com.fastcampus.projectboardadmin.domain.Article;
-import com.fastcampus.projectboardadmin.domain.ArticleComment;
-import com.fastcampus.projectboardadmin.domain.Hashtag;
-import com.fastcampus.projectboardadmin.domain.UserAccount;
-import com.fastcampus.projectboardadmin.dto.ArticleCommentDto;
-import com.fastcampus.projectboardadmin.dto.UserAccountDto;
-import com.fastcampus.projectboardadmin.repository.ArticleCommentRepository;
-import com.fastcampus.projectboardadmin.repository.ArticleRepository;
-import com.fastcampus.projectboardadmin.repository.UserAccountRepository;
+import com.fastcampus.projectboard.domain.Article;
+import com.fastcampus.projectboard.domain.ArticleComment;
+import com.fastcampus.projectboard.domain.Hashtag;
+import com.fastcampus.projectboard.domain.UserAccount;
+import com.fastcampus.projectboard.dto.ArticleCommentDto;
+import com.fastcampus.projectboard.dto.UserAccountDto;
+import com.fastcampus.projectboard.repository.ArticleCommentRepository;
+import com.fastcampus.projectboard.repository.ArticleRepository;
+import com.fastcampus.projectboard.repository.UserAccountRepository;
+import com.fastcampus.projectboard.service.ArticleCommentService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

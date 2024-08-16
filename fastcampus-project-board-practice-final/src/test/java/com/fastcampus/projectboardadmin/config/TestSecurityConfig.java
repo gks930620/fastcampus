@@ -1,7 +1,8 @@
 package com.fastcampus.projectboardadmin.config;
 
-import com.fastcampus.projectboardadmin.dto.UserAccountDto;
-import com.fastcampus.projectboardadmin.service.UserAccountService;
+import com.fastcampus.projectboard.config.SecurityConfig;
+import com.fastcampus.projectboard.dto.UserAccountDto;
+import com.fastcampus.projectboard.service.UserAccountService;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.event.annotation.BeforeTestMethod;

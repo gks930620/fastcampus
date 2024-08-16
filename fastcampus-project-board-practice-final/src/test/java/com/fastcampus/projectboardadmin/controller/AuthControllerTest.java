@@ -1,8 +1,8 @@
 package com.fastcampus.projectboardadmin.controller;
 
 import com.fastcampus.projectboardadmin.config.TestSecurityConfig;
-import com.fastcampus.projectboardadmin.service.ArticleService;
-import com.fastcampus.projectboardadmin.service.PaginationService;
+import com.fastcampus.projectboard.service.ArticleService;
+import com.fastcampus.projectboard.service.PaginationService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
